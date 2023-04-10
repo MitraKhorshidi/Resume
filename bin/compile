@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+TEX="lualatex"
+OUT_DIR=out
+
+# rm -rf $OUT_DIR
+mkdir -p $OUT_DIR
+
+$( dirname -- $0; )/$TEX \
+    --halt-on-error \
+    -output-directory="$OUT_DIR" \
+    $@ 

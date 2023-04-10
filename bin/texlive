@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+## pull texlive to use
+# podman pull docker.io/texlive/texlive
+
+podman run -i --rm \
+    --name texlive \
+    -v "$PWD":/usr/src/app:z \
+    -w /usr/src/app \
+    texlive/texlive:latest \
+    $@
