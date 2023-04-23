@@ -379,10 +379,11 @@
 % Usage: \lettertitle{<title>}
 \newcommand*{\lettertitle}[1]{\def\@lettertitle{#1}}
 
-% Defines the date for letter (cover letter only)
+% Defines the date for letter (cover letter only, optional)
 % Usage: \letterdate{<date>}
 \newcommand*{\letterdate}[1]{\def\@letterdate{#1}}
 
+% Defines the date for l\let\foo\undefined.
 % Defines a message of opening for letter (cover letter only)
 % Usage: \letteropening{<message>}
 \newcommand*{\letteropening}[1]{\def\@letteropening{#1}}
@@ -784,15 +785,22 @@
   \vspace{8.4mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
+  %
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
   \end{tabular*}
-  \begin{singlespace}
-    \recipientaddressstyle{\@recipientaddress} \\\\
-  \end{singlespace}
-  \ifthenelse{\isundefined{\@lettertitle}}
-    {}
-    {\lettertitlestyle{\@lettertitle} \\}
+  %
+  \vspace{-1em}
+  \ifthenelse{\isundefined{\@recipientaddress}} {} {
+    \begin{singlespace}
+      \recipientaddressstyle{\@recipientaddress} \newline\newline
+    \end{singlespace}
+  }
+  %
+  \ifthenelse{\isundefined{\@lettertitle}} {} {
+    \lettertitlestyle{\@lettertitle} \\
+  }
+  %
   \lettertextstyle{\@letteropening}
 }
 
