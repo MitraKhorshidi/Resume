@@ -32,14 +32,21 @@
 %	All of the below lines must be filled out
 %-------------------------------------------------------------------------------
 % The company being applied to
-\recipient
-{Company Recruitment Team}
-{
-Schaltbau GmbH \newline
-Hollerithstraße 5 \newline
-81829 München \newline
-Germany
-}
+\ifdefined\outCompany
+  \recipient
+  {Company Recruitment Team}
+  {
+    \outCompany
+  }
+\else
+  \recipient
+  {Company Recruitment Team}
+  {
+    adesso SE
+    \newline
+    Germany
+  }
+\fi
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
 % The title of the letter
