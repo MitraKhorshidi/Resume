@@ -1,26 +1,33 @@
-%Set variables
-%
-%Header
-\headerview
-\vspace{1ex}
-%Sections
-%
-%
-% Summary
-\input{sections/summery}
-%Education
-\input{sections/education}
-% % Experience
-% \input{sections/experience}
-% Skills
-\input{sections/skill}
-% Experience
-\input{sections/experience}
-% Courses
-\input{sections/courses}
-% Characteritic
-\input{sections/char}
-% Notes
-\input{sections/notes}
-%Footnote
-\createfootnote
+% 
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[L]
+% 
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today} %LEFT
+  {Mitra Khorshidi~~~·~~~Résumé} %CENTER
+  {\thepage} %RIGHT
+% 
+
+\vspace{1.5em}
+\input{sections/summary.tex}
+
+\vspace{1.5em}
+\input{sections/education.tex}
+
+\vspace{1.5em}
+\input{sections/skill.tex}
+
+\vspace{1.5em}
+\input{sections/experience.tex}
+
+\vspace{1.5em}
+\input{sections/course.tex}
+
+\vspace{1.5em}
+\input{sections/char.tex}
+
+\vspace{1.5em}
+\input{sections/notes.tex}
