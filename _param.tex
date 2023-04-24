@@ -50,7 +50,11 @@
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
 % The title of the letter
-\lettertitle{Job Application for Front-End Developer}
+\ifdefined\outPosition
+  \lettertitle{Job Application for \outPosition}
+\else
+  \lettertitle{Job Application for Front-End Developer}
+\fi
 % How the letter is opened
 \letteropening{Dear Hiring Manager,}
 % How the letter is closed
