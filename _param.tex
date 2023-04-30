@@ -4,7 +4,7 @@
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 \photo[rectangle,noedge,right]{./images/qr}
-\name{Mitra}{Khorshdi}
+\name{Mitra}{Khorshidi}
 \position{Front End Developer{\enskip\cdotp\enskip}UI Designer}
 \address{Munich{\enskip\cdotp\enskip}Germany}{https://goo.gl/maps/onUCGDxP77Pm8hmG8}
 % 
@@ -27,6 +27,14 @@
 % \extrainfo{extra information}
 % \quote{``Be the change that you want to see in the world."}
 
+
+\ifdefined\outPosition
+  \def\jobposition{\outPosition}
+\else
+  \def\jobposition{Front-End Developer}
+\fi
+
+
 %-------------------------------------------------------------------------------
 %	LETTER INFORMATION
 %	All of the below lines must be filled out
@@ -41,20 +49,12 @@
 \else
   \recipient
   {Company Recruitment Team}
-  {
-    adesso SE
-    \newline
-    Germany
-  }
+  {Germany}
 \fi
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
 % The title of the letter
-\ifdefined\outPosition
-  \lettertitle{Job Application for \outPosition}
-\else
-  \lettertitle{Job Application for Front-End Developer}
-\fi
+\lettertitle{Job Application for \jobposition}
 % How the letter is opened
 \letteropening{Dear Hiring Manager,}
 % How the letter is closed
