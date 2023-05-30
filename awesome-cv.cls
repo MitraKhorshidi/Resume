@@ -171,13 +171,13 @@
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 
-\newcommand*{\fontsizeXXL}[0]{\fontseries{m}\fontsize{32pt}{1.5em}}
-\newcommand*{\fontsizeXL}[0]{\fontseries{m}\fontsize{16pt}{1.5em}}
-\newcommand*{\fontsizeL}[0]{\fontseries{m}\fontsize{14pt}{1.5em}}
-\newcommand*{\fontsizeMM}[0]{\fontseries{m}\fontsize{13pt}{1.5em}}
-\newcommand*{\fontsizeM}[0]{\fontseries{m}\fontsize{12pt}{1.5em}}
-\newcommand*{\fontsizeS}[0]{\fontseries{m}\fontsize{11pt}{1.5em}}
-\newcommand*{\fontsizeXS}[0]{\fontseries{m}\fontsize{10pt}{1.5em}}
+\newcommand*{\fontsizeXXL}[0]{\fontseries{m}\fontsize{28pt}{1.5em}}
+\newcommand*{\fontsizeXL}[0]{\fontseries{m}\fontsize{14pt}{1.5em}}
+\newcommand*{\fontsizeL}[0]{\fontseries{m}\fontsize{13pt}{1.5em}}
+\newcommand*{\fontsizeMM}[0]{\fontseries{m}\fontsize{12pt}{1.5em}}
+\newcommand*{\fontsizeM}[0]{\fontseries{m}\fontsize{11pt}{1.5em}}
+\newcommand*{\fontsizeS}[0]{\fontseries{m}\fontsize{10pt}{1.5em}}
+\newcommand*{\fontsizeXS}[0]{\fontseries{m}\fontsize{9pt}{1.5em}}
 \newcommand*{\fontsizeXXS}[0]{\fontseries{m}\fontsize{9pt}{1.5em}}
 
 \newcommand{\mitdiv}{{\color{awesome}~~\textbar~~}}
@@ -635,6 +635,7 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
+\addvspace{-5mm}
   \par
   \sectionstyle{#1}
   \phantomsection
@@ -724,7 +725,7 @@
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
   \honordatestyle{#4} & \honorpositionstyle{#1} & \honorlocationstyle{#3} \\
-  ~ & \honortitlestyle{#2} \\
+  % ~ & \honortitlestyle{#2} \\
 }
 
 % Define an environment for cvskill
